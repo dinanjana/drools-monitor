@@ -1,0 +1,8 @@
+org\drools\beans\KIEContainerRegister.class
+org\drools\logic\DataFetcher.class
+org\drools\App.class
+org\drools\beans\KIEContainer.class
+org\drools\rest_source\JaxRsActivator.class
+org\drools\SessionDetailsController.class
+org\drools\beans\KIEBase.class
+org\drools\configuration\Configuration.class

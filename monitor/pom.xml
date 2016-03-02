@@ -26,6 +26,12 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.wildfly.swarm</groupId>
+            <artifactId>jaxrs</artifactId>
+            <version>1.0.0.Beta2</version>
+            <!--<scope>provided</scope>-->
+        </dependency>
+        <dependency>
             <groupId>org.kie</groupId>
             <artifactId>kie-api</artifactId>
             <version>${kie.version}</version>
@@ -56,6 +62,11 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.7</version>
+        </dependency>
         <!--<dependency>-->
             <!--<groupId>org.jboss.arquillian.junit</groupId>-->
             <!--<artifactId>arquillian-junit-container</artifactId>-->
@@ -68,4 +79,31 @@
             <!--<scope>test</scope>-->
         <!--</dependency>-->
     </dependencies>
+    <build>
+        <plugins>
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-war-plugin</artifactId>-->
+                <!--<configuration>-->
+                    <!--<failOnMissingWebXml>false</failOnMissingWebXml>-->
+                    <!--<packagingExcludes>WEB-INF/lib/wildfly-swarm-*.jar</packagingExcludes>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
+            <plugin>
+                <groupId>org.wildfly.swarm</groupId>
+                <artifactId>wildfly-swarm-plugin</artifactId>
+                <version>1.0.0.Beta2</version>
+                <configuration>
+                    <mainClass>org.drools.App</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>package</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

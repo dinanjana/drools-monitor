@@ -3,7 +3,8 @@ package org.drools.beans;
 import java.util.HashMap;
 
 /**
- * Created by Dinanjana on 27/02/2016.
+ * Created by Dinanjana
+ * on 27/02/2016.
  */
 public class KIEContainer {
 

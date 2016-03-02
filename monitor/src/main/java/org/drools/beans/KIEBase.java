@@ -1,5 +1,6 @@
 package org.drools.beans;
 
+import org.drools.core.management.KnowledgeBaseMonitoring;
 import org.kie.api.KieBase;
 import org.kie.api.runtime.KieSession;
 
