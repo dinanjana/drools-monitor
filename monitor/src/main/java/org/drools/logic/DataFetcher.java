@@ -1,7 +1,7 @@
 package org.drools.logic;
 
-import org.drools.beans.KIEContainer;
-import org.drools.beans.KIEContainerRegister;
+import org.drools.beans.deprecated.KIEContainer;
+import org.drools.beans.deprecated.KIEContainerRegister;
 
 /**
  * Created by dinanjanag

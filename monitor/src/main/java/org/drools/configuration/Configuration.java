@@ -1,10 +1,7 @@
 package org.drools.configuration;
 
-import org.drools.beans.KIEBase;
-import org.drools.beans.KIEContainer;
-import org.drools.beans.KIEContainerRegister;
+import org.drools.beans.deprecated.KIEContainerRegister;
 import org.kie.api.KieServices;
-import org.kie.api.logger.KieRuntimeLogger;
 import org.kie.api.runtime.KieContainer;
 
 /**

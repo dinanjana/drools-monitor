@@ -1,8 +1,9 @@
 package org.drools;
 
-import org.drools.beans.KIEBase;
-import org.drools.beans.KIEContainer;
-import org.drools.beans.KIEContainerRegister;
+import org.drools.beans.deprecated.KIEBase;
+import org.drools.beans.deprecated.KIEContainer;
+import org.drools.beans.deprecated.KIEContainerRegister;
+import org.drools.connector.JMXConnectorThread;
 import org.drools.core.common.InternalWorkingMemory;
 import org.drools.core.management.KieSessionMonitoringImpl;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
@@ -11,16 +12,7 @@ import org.kie.api.runtime.KieSession;
 import org.wildfly.swarm.container.Container;
 import org.wildfly.swarm.jaxrs.JAXRSArchive;
 
-import javax.management.*;
-import javax.management.remote.JMXConnector;
-import javax.management.remote.JMXConnectorFactory;
-import javax.management.remote.JMXServiceURL;
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
 
 /**
  * Hello world!
@@ -99,7 +91,9 @@ public class App
         // Create an RMI connector client and
         // connect it to the RMI connector server
         //
-        org.drools.connector.JMXConnector.connectToMbeanServer();
+        //org.drools.connector.JMXConnector.connectToMbeanServer();
+        JMXConnectorThread jmxConnectorThread = new JMXConnectorThread();
+        jmxConnectorThread.start();
 
 
     }
